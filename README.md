@@ -22,24 +22,32 @@ This tool queries from `hn.algolia.com/api` so the response time is around ~10ms
 
 1. Embed the javascript file.
 
+```
     <script src="https://txtpen.codes/txtpen-hn-embed.min.js"></script>
+```
 
 2. Add HTML tag to embed comment tree.
 
+```
     <txtpen-hn-comment></txtpen-hn-comment>
+```
 
 3. That's it. Enjoy :+1:
 
 4. Optional: if you want to specify the Story ID, add a meta tag similar to the one below. Otherwise it will query the url and link the corresponding HN comments automatically.
 
+```
     <meta property="hacker-news" content="{PUT_YOUR_STORY_ID_HERE}">
+```
 
 
 ## Development
 
+```
     git clone https://github.com/txtpen/hn.git
     cd hn
     npm install
     npm run dev
     # Production build:
     # npm run build
+```
