@@ -22,17 +22,18 @@ This tool queries from `hn.algolia.com/api` so the response time is around ~10ms
 
 1. Embed the javascript file.
 
-Put these lines at the top of page before `</head>`
+    a. Put these lines at the top of page before `</head>`
 
-```
-<link rel="preload" href="https://txtpen.codes/txtpen-hn-embed.min.js" as="script">
-<link href="https://txtpen.codes/txtpen-hn-embed.min.css" rel="stylesheet">
-```
+    ```
+    <link rel="preload" href="https://txtpen.codes/txtpen-hn-embed.min.js" as="script">
+    <link href="https://txtpen.codes/txtpen-hn-embed.min.css" rel="stylesheet">
+    ```
 
-Put this after `</body>` tag
-```
-<script src="https://txtpen.codes/txtpen-hn-embed.min.js"></script>
-```
+    b. Put this after `</body>` tag
+
+    ```
+    <script src="https://txtpen.codes/txtpen-hn-embed.min.js"></script>
+    ```
 
 2. Add HTML tag to embed comment tree.
 
