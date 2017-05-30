@@ -7,7 +7,9 @@ export default class Header extends Component {
   render() {
     return (
       <header class={style.header}>
-        <img src={HNLogo} alt="Hacker News Logo"/>
+        <a target="_blank" href={"https://news.ycombinator.com/item?id=" + this.props.id}>
+          <img src={HNLogo} alt="Hacker News Logo"/>
+        </a>
         <p> on: <a target="_blank" href={"https://news.ycombinator.com/item?id=" + this.props.id}>
           {this.props.title}
           </a>

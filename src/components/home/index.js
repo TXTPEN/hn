@@ -7,7 +7,7 @@ export default class Home extends Component {
     super(props);
   }
   render() {
-    const indicator = this.props.loading ? "Loading..." : "Comments:";
+    const indicator = this.props.loading ? "Loading..." : "";
     return (
       <div class={style.home}>
         <h4>{indicator}</h4>
