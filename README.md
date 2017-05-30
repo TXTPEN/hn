@@ -22,10 +22,15 @@ This tool queries from `hn.algolia.com/api` so the response time is around ~10ms
 
 1. Embed the javascript file.
 
+Put these lines at the top of page before `</head>`
+
 ```
-<!-- Put this line at the top of page before </head> -->
 <link rel="preload" href="https://txtpen.codes/txtpen-hn-embed.min.js" as="script">
-<!-- Put this after </body> -->
+<link href="https://txtpen.codes/txtpen-hn-embed.min.css" rel="stylesheet">
+```
+
+Put this after `</body>` tag
+```
 <script src="https://txtpen.codes/txtpen-hn-embed.min.js"></script>
 ```
 
