@@ -1,0 +1,128 @@
+<html><head>
+<link rel="preload" href="https://txtpen.codes/txtpen-hn-embed.min.js" as="script">
+<link href="https://txtpen.codes/txtpen-hn-embed.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="description" content="hn : Embed Hacker News comment tree automatically">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/hn/assets/css/style.css?v=c5db7f6cdf3d4fe2a1102807cecb4d31be6e1c9c">
+
+    <title>hn</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/TXTPEN/hn">View on GitHub</a>
+
+          <h1 id="project_title">hn</h1>
+          <h2 id="project_tagline">Embed Hacker News comment tree automatically</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1 id="embeddable-hn">embeddable-hn</h1>
+
+<p>Embed Hacker News comment tree automatically on your website.</p>
+
+<h2 id="how-it-works">How it works</h2>
+
+<p>There is always better discussion on HN than in your Disqus comment box. Instead of a link to HN, you can embed it on your page.</p>
+
+<p>Benefits:</p>
+
+<ol>
+  <li>
+    <p>Value-add your readers from other sources.</p>
+  </li>
+  <li>
+    <p>Boost site ranking and SEO. (GoogleBot executes JavaScript).</p>
+  </li>
+  <li>
+    <p>Keep discussion on your page.</p>
+  </li>
+  <li>
+    <p>Alternatively, checkout <a href="https://txtpen.com">txtpen</a> for highlights and inline comments.</p>
+  </li>
+</ol>
+
+<p>This tool queries from <code class="highlighter-rouge">hn.algolia.com/api</code> so the response time is around ~10ms. It won’t slow your page down.</p>
+
+<h2 id="basic-usage">Basic Usage</h2>
+
+<ol>
+  <li>
+    <p>Embed the javascript file.</p>
+
+    <p>a. Put these lines at the top of page before <code class="highlighter-rouge">&lt;/head&gt;</code></p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> &lt;link rel="preload" href="https://txtpen.codes/txtpen-hn-embed.min.js" as="script"&gt;
+ &lt;link href="https://txtpen.codes/txtpen-hn-embed.min.css" rel="stylesheet"&gt;
+</code></pre>
+    </div>
+
+    <p>b. Put this after <code class="highlighter-rouge">&lt;/body&gt;</code> tag</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> &lt;script src="https://txtpen.codes/txtpen-hn-embed.min.js"&gt;&lt;/script&gt;
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Add HTML tag to embed comment tree.</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;txtpen-hn-comment&gt; &lt;/txtpen-hn-comment&gt;
+</code></pre>
+</div>
+
+<ol>
+  <li>
+    <p>That’s it. Enjoy :+1:</p>
+  </li>
+  <li>
+    <p>Optional: if you want to specify the Story ID, add a meta tag similar to the one below. Otherwise it will query the url and link the corresponding HN comments automatically.</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;meta property="hacker-news" content="{PUT_YOUR_STORY_ID_HERE}"&gt;
+</code></pre>
+</div>
+
+<h2 id="development">Development</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/txtpen/hn.git
+cd hn
+npm install
+npm run dev
+# Production build:
+# npm run build
+</code></pre>
+</div>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">hn maintained by <a href="https://github.com/TXTPEN">TXTPEN</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+<script src="https://txtpen.codes/txtpen-hn-embed.min.js"></script>
+
+    
+  
+
+</body></html>
