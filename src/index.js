@@ -6,7 +6,14 @@ import './style';
 let root;
 function init() {
 	let App = require('./components/app').default;
-	root = render(<App />, document.body, root);
+
+	const element = document.querySelector('meta[property="hacker-news"]');
+	var hnID = undefined;
+	if (element) {
+		hnID = element.getAttribute("content");
+	}
+
+	root = render(<App id={hnID}/>, document.querySelector('txtpen-hn-comment'), root);
 }
 
 // register ServiceWorker via OfflinePlugin, for prod only:
