@@ -1,6 +1,6 @@
 # embeddable-hn
 
-Embed Hacker News comment tree automatically on your website.
+Embed Hacker News comment tree automatically on your website. Built with [Preact](https://preactjs.com).
 
 ## How it works
 
