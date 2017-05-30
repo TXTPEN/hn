@@ -8,7 +8,7 @@ function init() {
 	let App = require('./components/app').default;
 
 	const element = document.querySelector('meta[property="hacker-news"]');
-	var hnID = undefined;
+	let hnID;
 	if (element) {
 		hnID = element.getAttribute("content");
 	}

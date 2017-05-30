@@ -7,10 +7,10 @@ function timeSince(date) {
     date = new Date(date);
   }
 
-  var seconds = Math.floor(((new Date().getTime()/1000) - date))
-  var intervalType;
+  const seconds = Math.floor(((new Date().getTime()/1000) - date));
+  let intervalType;
 
-  var interval = Math.floor(seconds / 31536000);
+  let interval = Math.floor(seconds / 31536000);
   if (interval >= 1) {
     intervalType = 'year';
   } else {
@@ -43,7 +43,7 @@ function timeSince(date) {
   }
 
   return interval + ' ' + intervalType + ' ago';
-};
+}
 
 
 
@@ -56,7 +56,7 @@ class Child extends Component {
     super();
     this.state = {
       hidden: false
-    }
+    };
   }
 
   toggleHide() {
@@ -65,9 +65,9 @@ class Child extends Component {
 
   renderBody(comment) {
     if (this.state.hidden) return null;
-    else return (
+    return (
       <div>
-        <div className={style.body} dangerouslySetInnerHTML={{__html: comment.text}}></div>
+        <div className={style.body} dangerouslySetInnerHTML={{__html: comment.text}} />
         {renderChildren(comment.children)}
       </div>
     );
@@ -101,9 +101,8 @@ class Child extends Component {
           {this.renderBody(comment)}
         </div>
       );
-    } else {
-      return null;
     }
+    return null;
   }
 }
 
@@ -119,7 +118,7 @@ const renderChildren = (children, topLevel=false) => {
       {sortedChildren.map((c) => <Child comment={c} topLevel={topLevel} />)}
     </div>
   );
-}
+};
 
 
 
@@ -139,7 +138,7 @@ export default class Comments extends Component {
         <div>
           {renderChildren(children, true)}
         </div>
-      )
+      );
     }
   }
 }
