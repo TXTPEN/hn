@@ -4,7 +4,7 @@ import Header from './header';
 import Home from './home';
 
 function fetchStory(url) {
-  return fetch("http://hn.algolia.com/api/v1/search?query=" + url)
+  return fetch("https://hn.algolia.com/api/v1/search?query=" + url)
   .then((res) => {
     if (res.status >= 200 && res.status < 300)
       return Promise.resolve(res);
@@ -21,7 +21,7 @@ function getTopMatchID(data) {
 }
 
 function fetchCommentsByID(id) {
-  return fetch("http://hn.algolia.com/api/v1/items/" + id)
+  return fetch("https://hn.algolia.com/api/v1/items/" + id)
   .then((res) => {
     if (res.status >= 200 && res.status < 300)
       return Promise.resolve(res);
@@ -44,7 +44,7 @@ export default class App extends Component {
       });
     } else {
       const url = document.URL;
-      // url = "http://danwang.co/why-so-few-computer-science-majors?idk"
+      // url = "https://danwang.co/why-so-few-computer-science-majors?idk"
       fetchStory(url)
       .then(getTopMatchID)
       .then(fetchCommentsByID)
