@@ -42,8 +42,14 @@ function timeSince(date) {
     intervalType += 's';
   }
 
-  return interval + ' ' + intervalType;
+  return interval + ' ' + intervalType + ' ago';
 };
+
+
+
+
+
+
 
 class Child extends Component {
   constructor() {
@@ -101,13 +107,25 @@ class Child extends Component {
   }
 }
 
+
+
+
+
+
 const renderChildren = (children, topLevel=false) => {
+  const sortedChildren = children.sort((a,b)=> b.created_at_i - a.created_at_i);
   return (
     <div class={style.comments}>
-      {children.map((c) => <Child comment={c} topLevel={topLevel} />)}
+      {sortedChildren.map((c) => <Child comment={c} topLevel={topLevel} />)}
     </div>
   );
 }
+
+
+
+
+
+
 
 export default class Comments extends Component {
   constructor(props) {

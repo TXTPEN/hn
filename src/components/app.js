@@ -53,7 +53,7 @@ export default class App extends Component {
       });
     } else {
       var url = document.URL;
-      url = "http://danwang.co/why-so-few-computer-science-majors?idk"
+      // url = "http://danwang.co/why-so-few-computer-science-majors?idk"
       fetchStory(url)
       .then(getTopMatchID)
       .then(fetchCommentsByID)
