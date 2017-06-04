@@ -34,6 +34,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      posted: true,
       loading: true,
       comments: []
     };
@@ -50,6 +51,9 @@ export default class App extends Component {
       .then(fetchCommentsByID)
       .then((comments) => {
         this.setState({loading: false, comments});
+      })
+      .catch((e) =>{
+        this.setState({loading: true, posted: false});
       });
     }
 
@@ -62,7 +66,7 @@ export default class App extends Component {
           title={this.state.comments.title}
           id={this.state.comments.id}
         />
-        <Home loading={this.state.loading} comments={this.state.comments} />
+        <Home loading={this.state.loading} posted={this.state.posted} comments={this.state.comments} />
       </div>
     );
   }

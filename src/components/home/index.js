@@ -7,7 +7,16 @@ export default class Home extends Component {
     super(props);
   }
   render() {
-    const indicator = this.props.loading ? "Loading..." : "";
+    let indicator = "";
+    if (this.props.posted) {
+        if (this.props.loading) {
+            indicator = "Loading..."
+        }
+    }
+    else {
+        indicator = "This url is not posted on HN."
+    }
+
     return (
       <div class={style.home}>
         <h4>{indicator}</h4>
