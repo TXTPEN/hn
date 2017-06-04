@@ -41,7 +41,7 @@ This tool queries from `hn.algolia.com/api` so the response time is around ~10ms
 <txtpen-hn-comment> </txtpen-hn-comment>
 ```
 
-3. That's it. Enjoy :+1:
+3. That's it.
 
 4. Optional: if you want to specify the Story ID, add a meta tag similar to the one below. Otherwise it will query the url and link the corresponding HN comments automatically.
 
