@@ -17,7 +17,7 @@ function fetchStory(url) {
 function getTopMatchID(data) {
   if (data.size === 0)
     return Promise.reject(new Error("not posted on HN"));
-  return Promise.resolve(data.results[0].objectID);
+  return Promise.resolve(data.results.filter((a)=>a.parent_id == null)[0].objectID);
 }
 
 function fetchCommentsByID(id) {
