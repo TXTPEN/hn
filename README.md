@@ -4,7 +4,7 @@ Embed Hacker News comment tree automatically on your website. Built with [Preact
 
 ## Sites using this plugin
 
-* [rickyhan.com](rickyhan.com/blog/k8s.html)
+* [rickyhan.com](http://rickyhan.com/blog/k8s.html)
 
 If you want your site featured here, submit a pull request.
 
