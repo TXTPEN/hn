@@ -2,6 +2,12 @@
 
 Embed Hacker News comment tree automatically on your website. Built with [Preact](https://preactjs.com).
 
+## Sites using this plugin
+
+* [rickyhan.com](rickyhan.com/blog/k8s.html)
+
+If you want your site featured here, submit a pull request.
+
 ## How it works
 
 There is always better discussion on HN than in your Disqus comment box. Instead of a link to HN, you can embed it on your page.
